@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 2,
+      "text": "Meeting at School",
+      "day": "Feb 6th at 2:30 pm",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "text": "Church",
+      "day": "Feb 6th at 4:30 pm ",
+      "reminder": true
+    },
+    {
+      "text": "Pray",
+      "day": "Every morning and night",
+      "reminder": true,
+      "id": 4
+    }
+  ]
+}
