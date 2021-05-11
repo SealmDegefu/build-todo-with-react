@@ -11,7 +11,7 @@
         "sealed calf raise: 10 sealed calf raise"
         ], 
     "video" : "",
-    "completed": false
+    "isCompleted": false
         },
         {
         "id" : 1,
@@ -24,7 +24,7 @@
             "treadmill: 30 min. treadmill"              
         ], 
         "video" : "",
-        "completed": false
+        "isCompleted": false
         },
         {
         "id" : 2,
@@ -37,7 +37,7 @@
             "cycling: 30 min. cycling"              
         ], 
         "video" : "",
-        "completed": false
+        "isCompleted": false
         },
         {
         "id" : 4,
@@ -50,7 +50,7 @@
             "sealed calf raise: 10 sealed calf raise"              
         ], 
         "video" : "",
-        "completed": false
+        "isCompleted": false
         },
         {
         "id" : 5,
@@ -63,7 +63,7 @@
             "treadmill: 30 min. treadmill"              
         ], 
         "video" : "",
-        "completed": false
+        "isCompleted": false
         }
     ]  
 }

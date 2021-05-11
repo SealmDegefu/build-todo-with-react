@@ -5,8 +5,8 @@ import Goals from './Goals'
 const Body = (props) => {
     return (
         <div className='rowC'>
-            <Content dataContent={props.dataContent}/>
-            <Goals/>
+            <Content />
+            <Goals dataContent={props.dataContent} />
         </div>
     )
 }

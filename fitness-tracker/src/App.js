@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components.js/Header'
-import Quotes from './components.js/Quotes'
-import Body from './components.js/Body'
-import Footer from './components.js/Footer'
+import Header from './Components/Header'
+import Quotes from './Components/Quotes'
+import Body from './Components/Body'
+import Footer from './Components/Footer'
 import React from 'react';
 
 
 class App extends React.Component {
   
-  
-  
-    state = {
+  constructor() {
+    super()
+
+    this.state = {
       weeklyGoal: [],
       filters: {
         day: "all"
       }
     }
-  
+  }
   
   fetch=()=>{
     fetch('http://localhost:3001/weeklyGoal')
@@ -33,16 +34,16 @@ class App extends React.Component {
     }
   fetch(url)
   .then(res => res.json())
-  .then(dateArr => console.log(dateArr))
+  .then(dateArr => this.setState({weeklyGoal: dateArr}))
     }
     onChangeType =({target: {value} }) =>{
-      this.setState( {filters: { type: value}})
+      this.setState( {filters: { day: value}})
     }
     
 render(){
   return (
     <div className="App">
-      <Header dataFilter={this.dataFilter} onChangeType={this.onChangeType} fetch={this.fetch}/>
+      <Header dataFilter={this.dataFilter} onChangeType={this.onChangeType} />
       <Body dataContent={this.state.weeklyGoal}/>
       <Quotes/>
       <Footer/>
