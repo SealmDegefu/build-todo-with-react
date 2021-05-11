@@ -1,0 +1,30 @@
+import React from 'react'
+
+const form = () => {
+    
+    const submitTodohandler = (event) => {
+        event.preventDefault()
+
+    }
+
+    return (
+        <div>
+            <form>
+      <input  
+	  type="text" className="todo-input" />
+      <button className="todo-button" type="submit" onClick={submitTodohandler}>
+        <i className="fas fa-plus-square">Add Goal</i>
+      </button>
+      <div className="select">
+        <select  name="todos" className="filter-todo">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+      </div>
+        </form>
+        </div>
+    )
+}
+
+export default form
