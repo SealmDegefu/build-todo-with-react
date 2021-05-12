@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -7,7 +7,20 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
-const Form = () => {
+const Form = ({ addTask }) => {
+
+
+  const [ userInput, setUserInput ] = useState('');
+
+  const handleChange = (e) => {
+      setUserInput(e.currentTarget.value)
+  }
+
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      addTask(userInput);
+      setUserInput("");
+  }
 
   const style ={
     backgroundImage: 'linear-gradient(120deg, #F6D365 0%, #FD85C7 100%)',
@@ -32,9 +45,9 @@ const Form = () => {
 
     return (
         <div>
-            <form className={classes.root} noValidate autoComplete="off">
-            <TextField id="standard-basic" label="Additional Daily Goal" 
-	  type="text" className="todo-input" />
+            <form className={classes.root} noValidate autoComplete="off" onSubmit={handleSubmit}>
+            <input value={userInput} type="text" onChange={handleChange} placeholder="Enter task..."/>
+    <button>Submit</button>
       {/* <input  
 	  type="text" className="todo-input" />
       <button className="todo-button" type="submit" onClick={submitTodohandler}>

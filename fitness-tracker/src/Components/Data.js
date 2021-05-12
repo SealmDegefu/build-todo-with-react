@@ -11,12 +11,15 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
+import YouTube from 'react-youtube';
 
 
 
 
 const Data = (props) => {
-
+  //https://www.youtube.com/watch?v=_nBlN9yp9R8
+  //https://youtu.be/_nBlN9yp9R8
+  //https://youtu.be/UItWltVZZmE
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -50,17 +53,29 @@ const useStyles = makeStyles((theme) => ({
     setExpanded(!expanded);
   };
 
+  const opts = {
+    height: '390',
+    width: '640',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
+  const videoOnReady = (event) => {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
+
+  const {videoId} = props
   return (
+
     <Card className={classes.root} style={{margin: "20px", backgroundColor: "pink"}}>
       <CardHeader
         title="Today's Workout Plan"
         subheader= {props.data.day}
       />
-      <CardMedia
-        className={classes.media}
-        image={props.data.video}
-        title="Paella dish"
-      />
+      <CardMedia/>
+      <YouTube videoId="UItWltVZZmE" opts={opts} onReady={videoOnReady} />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
         <ul className="date" style={{textAlign: 'left'}}>

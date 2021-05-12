@@ -133,3 +133,6 @@ select {
   cursor: pointer;
   pointer-events: none;
 }
+.strike {
+  text-decoration: line-through;
+}

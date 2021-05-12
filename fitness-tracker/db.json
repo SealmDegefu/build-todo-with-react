@@ -10,7 +10,7 @@
         "glute ham raise: 15 glute ham raise",
         "sealed calf raise: 10 sealed calf raise"
         ], 
-    "video" : "",
+    "video" : "https://www.youtube.com/watch?v=1zkgdLZEdwM",
     "isCompleted": false
         },
         {
@@ -23,7 +23,7 @@
             "lateral raise: 15 lateral raise",
             "treadmill: 30 min. treadmill"              
         ], 
-        "video" : "",
+        "video" : "https://www.youtube.com/watch?v=1zkgdLZEdwM",
         "isCompleted": false
         },
         {
@@ -36,7 +36,7 @@
             "face pulls: 15 face pulls",
             "cycling: 30 min. cycling"              
         ], 
-        "video" : "",
+        "video" : "https://www.youtube.com/watch?v=1zkgdLZEdwM",
         "isCompleted": false
         },
         {
@@ -49,7 +49,7 @@
             "lateral raise: 15 lateral raise",
             "sealed calf raise: 10 sealed calf raise"              
         ], 
-        "video" : "",
+        "video" : "https://www.youtube.com/watch?v=1zkgdLZEdwM",
         "isCompleted": false
         },
         {
@@ -62,7 +62,7 @@
             "face pulls: 15 face pulls",
             "treadmill: 30 min. treadmill"              
         ], 
-        "video" : "",
+        "video" : "https://www.youtube.com/watch?v=1zkgdLZEdwM",
         "isCompleted": false
         }
     ]  

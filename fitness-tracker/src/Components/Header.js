@@ -15,14 +15,14 @@ const Header = ({onChangeType, dataFilter}) => {
         <div className="field">
         <select name='todos' className='filter-todo' style={{ backgroundImage: 'linear-gradient(120deg, #F6D365 0%, #FD85C7 100%)',
         padding: '10px'}} onChange={onChangeType} >
-        <option value="all">----None----</option>
+        <option value="all">----All----</option>
             <option value="Monday">Monday</option>
             <option value="Tuesday">Tuesday</option>
             <option value="Wednesday">Wednesday</option>
             <option value="Thursday">Thursday</option>
             <option value="Friday">Friday</option>
           </select>
-            <button style={style}onClick={dataFilter} >Pick Today's Workout</button>
+            <button style={style} onClick={dataFilter} >Pick Today's Workout</button>
         </div>
 </div>
 
