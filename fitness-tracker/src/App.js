@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React from 'react';
 import Home from './Home'
@@ -10,10 +10,13 @@ import {
 } from "react-router-dom";
 import NavBar from './NavBar'
 import Workout from './Components/Workout'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
 class App extends React.Component {
+
     
     
 render(){
@@ -26,7 +29,7 @@ render(){
     <Route exact path="/">
     <Home />
     </Route>
-    <Route path="/create">
+    <Route path="/Workout">
     <Workout />
     </Route>
     </Switch>

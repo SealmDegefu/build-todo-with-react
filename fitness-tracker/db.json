@@ -1,69 +1,70 @@
 {
-    "weeklyGoal" : [
+  "weeklyGoal": [
     {
-    "id" : 0,
-    "day" : "Monday",
-    "task" : [
+      "id": 0,
+      "day": "Monday",
+      "task": [
         "squats: 10 squats",
         "lunges: 20 lunges",
         "hip thrust: 15 hip thrust",
         "glute ham raise: 15 glute ham raise",
         "sealed calf raise: 10 sealed calf raise"
-        ], 
-    "video" : "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-    "isCompleted": false
-        },
-        {
-        "id" : 1,
-        "day" : "Tuesday",
-        "task" : [
-            "Barbell Press: 8 Barbell Press",
-            "shoulder press: 15 shoulder press",
-            "dumbell press: 12 dumbell press",
-            "lateral raise: 15 lateral raise",
-            "treadmill: 30 min. treadmill"              
-        ], 
-        "video" : "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-        "isCompleted": false
-        },
-        {
-        "id" : 2,
-        "day" : "Wednesday",
-        "task" : [
-            "pull-ups: 15 pull-ups",
-            "barbell row: 15 barbell row",
-            "lateral pulldowns: 12 lateral pulldowns",
-            "face pulls: 15 face pulls",
-            "cycling: 30 min. cycling"              
-        ], 
-        "video" : "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-        "isCompleted": false
-        },
-        {
-        "id" : 4,
-        "day" : "Thursday",
-        "task" : [
-            "squats: 10 squats",
-            "lunges: 20 lunges",
-            "dumbell press: 12 dumbell press",
-            "lateral raise: 15 lateral raise",
-            "sealed calf raise: 10 sealed calf raise"              
-        ], 
-        "video" : "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-        "isCompleted": false
-        },
-        {
-        "id" : 5,
-        "day" : "Friday",
-        "task" : [
-            "Barbell Press: 8 Barbell Press",
-            "shoulder press: 15 shoulder press",
-            "lateral pulldowns: 12 lateral pulldowns",
-            "face pulls: 15 face pulls",
-            "treadmill: 30 min. treadmill"              
-        ], 
-        "video" : "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-        "isCompleted": false
-        }
-    ]  
+      ],
+      "video": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
+      "isCompleted": false
+    },
+    {
+      "id": 1,
+      "day": "Tuesday",
+      "task": [
+        "Barbell Press: 8 Barbell Press",
+        "shoulder press: 15 shoulder press",
+        "dumbell press: 12 dumbell press",
+        "lateral raise: 15 lateral raise",
+        "treadmill: 30 min. treadmill"
+      ],
+      "video": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
+      "isCompleted": false
+    },
+    {
+      "id": 2,
+      "day": "Wednesday",
+      "task": [
+        "pull-ups: 15 pull-ups",
+        "barbell row: 15 barbell row",
+        "lateral pulldowns: 12 lateral pulldowns",
+        "face pulls: 15 face pulls",
+        "cycling: 30 min. cycling"
+      ],
+      "video": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
+      "isCompleted": false
+    },
+    {
+      "id": 4,
+      "day": "Thursday",
+      "task": [
+        "squats: 10 squats",
+        "lunges: 20 lunges",
+        "dumbell press: 12 dumbell press",
+        "lateral raise: 15 lateral raise",
+        "sealed calf raise: 10 sealed calf raise"
+      ],
+      "video": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
+      "isCompleted": false
+    },
+    {
+      "id": 5,
+      "day": "Friday",
+      "task": [
+        "Barbell Press: 8 Barbell Press",
+        "shoulder press: 15 shoulder press",
+        "lateral pulldowns: 12 lateral pulldowns",
+        "face pulls: 15 face pulls",
+        "treadmill: 30 min. treadmill"
+      ],
+      "video": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
+      "isCompleted": false
+    }
+  ]
 }
+

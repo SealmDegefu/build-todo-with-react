@@ -6,7 +6,6 @@ const Body = (props) => {
     return (
         <div className='rowC'>
             <Content />
-            <Goals dataContent={props.dataContent} />
         </div>
     )
 }

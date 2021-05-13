@@ -23,7 +23,10 @@ const Data = (props) => {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 660,
+    textAlign: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   media: {
     height: 0,
@@ -69,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   const {videoId} = props
   return (
 
-    <Card className={classes.root} style={{margin: "20px", backgroundColor: "pink"}}>
+    <Card className={classes.root} style={{margin: "20px", backgroundColor: "gray"}}>
       <CardHeader
         title="Today's Workout Plan"
         subheader= {props.data.day}
@@ -88,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
         </IconButton>
         <IconButton aria-label="share">
         </IconButton>
-        <button className="ui primary button">Complete Task</button>
+        {props.data.isCompleted === true?  <button className="ui">Task Completed</button> : <button className="ul" onClick ={() => props.onCompleted(props.data.id)}>Complete task</button> }
       </CardActions>
     </Card>
   );

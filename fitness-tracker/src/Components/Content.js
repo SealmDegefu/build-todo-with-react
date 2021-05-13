@@ -1,36 +1,65 @@
 import React, { useState, useEffect } from 'react'
 import TodoList from './Todolist'
 import Form from './Form'
+import axios from 'axios'
+
 
 const Content = () => {
+  
+  //states
 
-    
-  const [ todoList, setTodoList ] = useState([]);
+  const [inputText, setInputText] = useState('');
+  const [todos, setTodos] = useState([]);
+  const [status, setStatus] = useState('all');
+  const [filteredTodos, setFilterTodos] = useState([]);
+  
+  //useEffect
+  useEffect(() => {
+    filterHandler();
+  }, [todos, status]);
+  
+  //functions
+  
+  const filterHandler = () =>{
+    switch (status) {
+      case "completed":
+        setFilterTodos(todos.filter((todo) => todo.completed === true))
+        break;
+        case "uncompleted":
+          setFilterTodos(todos.filter((todo) => todo.completed === false))
+          break;
+          default:
+            setFilterTodos(todos);
+            break;
+          }
+        }
+        
+        //axios request
+        const api = axios.create({
+          baseURL: `http://localhost:3000/weeklyGoal/`
+        })
 
-  const handleToggle = (id) => {
-    let mapped = todoList.map(task => {
-      return task.id === Number(id) ? { ...task, complete: !task.complete } : { ...task};
-    });
-    setTodoList(mapped);
-  }
+        
+        const deleteTodo = async (id) =>{
+          let data = await api.delete(`/${id}`)
+          this.getTodos();
+        }
 
-  const handleFilter = () => {
-    let filtered = todoList.filter(task => {
-      return !task.complete;
-    });
-    setTodoList(filtered);
-  }
 
-  const addTask = (userInput ) => {
-    let copy = [...todoList];
-    copy = [...copy, { id: todoList.length + 1, task: userInput, complete: false }];
-    setTodoList(copy);
-  }
   return (
     <div>
-      <Form addTask={addTask}
+      <Form 
+      setStatus={setStatus}
+      todos={todos}
+      setInputText={setInputText} 
+      setTodos={setTodos} 
+      inputText={inputText}
       />
-      <TodoList todoList={todoList} handleToggle={handleToggle} handleFilter={handleFilter}
+      <TodoList 
+        deleteTodo={deleteTodo}
+        todos={todos}
+        setTodos={setTodos}
+        filteredTodos={filteredTodos}
       />
     </div>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import Goals from './Goals'
 
  class Workout extends React.Component {
 	constructor() {
@@ -12,9 +13,15 @@ import Header from './Header'
 		  }
 		}
 	  }
-	dataFilter = () => {
+	  fetch=()=>{
+		fetch('http://localhost:3000/weeklyGoal')
+		.then(res=>res.json())
+		.then(data =>this.setState({weeklyGoal:data}))
+	  }
+	  
+	  dataFilter = () => {
 		
-		let url = 'http://localhost:3001/weeklyGoal'
+		let url = 'http://localhost:3000/weeklyGoal'
 		if(this.state.filters.day !== 'all'){
 		  url += `?day=${this.state.filters.day}`
 		}
@@ -25,10 +32,20 @@ import Header from './Header'
 		onChangeType =({target: {value} }) =>{
 		  this.setState( {filters: { day: value}})
 		}
+
+		onCompleted =(id) => {
+			const completedTask = this.state.weeklyGoal.map(goal => (goal.id == id) ? { ...goal, isCompleted: true} : goal )
+		   this.setState({weeklyGoal: completedTask})
+		   }
+
 		render () {
+
 	return (
 		<div>
 			<Header dataFilter={this.dataFilter} onChangeType={this.onChangeType} />
+			<Goals 
+			dataContent={this.state.weeklyGoal}
+			onCompleted={this.onCompleted} />
 		</div>
 	)
 		}

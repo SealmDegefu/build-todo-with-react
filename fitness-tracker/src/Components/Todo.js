@@ -1,15 +1,40 @@
 import React from 'react'
 
-const Todo = ({ todo, handleToggle }) => {
+const Todo = ({ text, todo, todos, setTodos, deleteTodo }) => {
 
-	const handleClick = (e) => {
-        e.preventDefault()
-        handleToggle(e.currentTarget.id)
-    }
+	// const handleClick = (e) => {
+    //     e.preventDefault()
+    //     handleToggle(e.currentTarget.id)
+    // }
+
+	//Events
+
+	const deleteHandler =() =>{
+		setTodos(todos.filter((element) => element.id !== todo.id))
+	};
+
+	const completeHandler = () => {
+		setTodos(
+			todos.map((item) => {
+		if (item.id === todo.id) {
+			return {
+				...item, 
+				completed: !item.completed,
+			};
+		}
+			return item;
+	})
+		);
+	}
 
 	return (
-	<div id={todo.id} key={todo.id + todo.task} name="todo" value={todo.id} onClick={handleClick} className={todo.complete ? "todo strike" : "todo"}>
-	{todo.task}
+	<div className="todo">
+	<li className={`todo-item ${todo.completed ? "completed": ''}`}>
+	{text}
+	</li>
+	<button onClick={completeHandler} className="complete-btn">
+	<i className="fas fa-check"></i></button>
+	<button onClick={deleteHandler} className="trash-btn"><i className="fas fa-trash"></i></button>
     </div>	
 
 	)

@@ -8,7 +8,7 @@ class Quotes extends React.Component {
         //     return Math.floor(Math.random() * 1000)
         // }
     return (
-        <div style={{
+        <div className ="content"style={{
             position: 'absolute',
             marginLeft: '250px',
            textAlign: 'center',

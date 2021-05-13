@@ -14,13 +14,31 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #F6D365 0%, #FD85C7 100%);
+  background-color: rgba(white,0,0,0.5);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+  background-image: url('https://media.istockphoto.com/photos/gym-background-with-equipment-picture-id845970122?k=6&m=845970122&s=612x612&w=0&h=-las2BorgfNUXc84u3MrnOoztybpaGkxWTfGWZb1Cg8=');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+.navbar {
+  opacity: 1;  
+}
+
 header {
   font-size: 2rem;
+}
+
+h1{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.ui{
+opacity: 0.5;
 }
 header,
 form {
@@ -38,13 +56,13 @@ form button {
   background: white;
 }
 form button {
-  color: #FF6F47;
+  color: black;
   background: #F7FFFE;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 form button:hover {
-  background: #FF6F47;
+  background:lightgray;
   color: white;
 }
 .todo-container {
@@ -59,7 +77,7 @@ form button:hover {
 .todo {
   margin: 0.5rem;
   background: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: black;
   display: flex;
   justify-content: space-between;
@@ -74,7 +92,7 @@ form button:hover {
 }
 .trash-btn,
 .complete-btn {
-  background: #FF6F47;
+  background: darkslategrey;
   color: white;
   border: none;
   padding: 1rem;
@@ -82,7 +100,7 @@ form button:hover {
   font-size: 1rem;
 }
 .complete-btn {
-  background: rgb(11, 212, 162);
+  background:black;
 }
 .todo-item {
   padding: 0rem 0.5rem;
@@ -117,7 +135,7 @@ select {
   overflow: hidden;
 }
 select {
-  color: #FF6F47;
+  color: black;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
@@ -129,7 +147,7 @@ select {
   top: 0;
   right: 0;
   padding: 0.5rem;
-  background: #FF6F47;
+  background: gray;
   cursor: pointer;
   pointer-events: none;
 }
