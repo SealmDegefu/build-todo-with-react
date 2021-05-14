@@ -3,7 +3,7 @@ import React from 'react'
 const Header = ({onChangeType, dataFilter}) => {
 
     const style ={
-        background: 'black',
+        background: 'grey',
         padding: '7.5px',
         color: 'white'
     }
@@ -11,7 +11,7 @@ const Header = ({onChangeType, dataFilter}) => {
         <div className ="content" style={{opacity: 1}}>
         <h3 style={{opacity: 1}}>Pick a Day</h3>
         <div className="field">
-        <select name='todos' className='filter-todo' style={{ background: 'black', color: 'white',
+        <select name='todos' className='filter-todo' style={{ background: 'white', color: 'black',
         padding: '10px'}} onChange={onChangeType} >
         <option value="all">----All----</option>
             <option value="Monday">Monday</option>

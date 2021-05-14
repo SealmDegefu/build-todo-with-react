@@ -17,9 +17,9 @@ import YouTube from 'react-youtube';
 
 
 const Data = (props) => {
-  //https://www.youtube.com/watch?v=_nBlN9yp9R8
-  //https://youtu.be/_nBlN9yp9R8
-  //https://youtu.be/UItWltVZZmE
+  // https://www.youtube.com/watch?v=_nBlN9yp9R8
+  // https://youtu.be/_nBlN9yp9R8
+  // https://youtu.be/UItWltVZZmE
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -91,9 +91,9 @@ const useStyles = makeStyles((theme) => ({
         </IconButton>
         <IconButton aria-label="share">
         </IconButton>
-        {props.data.isCompleted === true?  <button className="ui">Task Completed</button> : <button className="ul" onClick ={() => props.onCompleted(props.data.id)}>Complete task</button> }
-      </CardActions>
-    </Card>
+        {props.data.isCompleted === true?  <button className="ui">Task Completed</button> : <button className="ul" onClick ={() => props.onCompleted(props.data.id)}>Complete task</button>}
+        </CardActions>
+        </Card>
   );
 
 

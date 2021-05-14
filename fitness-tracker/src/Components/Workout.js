@@ -14,14 +14,14 @@ import Goals from './Goals'
 		}
 	  }
 	  fetch=()=>{
-		fetch('http://localhost:3000/weeklyGoal')
+		fetch('http://localhost:3001/weeklyGoal')
 		.then(res=>res.json())
 		.then(data =>this.setState({weeklyGoal:data}))
 	  }
 	  
 	  dataFilter = () => {
 		
-		let url = 'http://localhost:3000/weeklyGoal'
+		let url = 'http://localhost:3001/weeklyGoal'
 		if(this.state.filters.day !== 'all'){
 		  url += `?day=${this.state.filters.day}`
 		}

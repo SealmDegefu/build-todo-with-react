@@ -34,16 +34,21 @@ const Content = () => {
           }
         }
         
-        //axios request
-        const api = axios.create({
-          baseURL: `http://localhost:3000/weeklyGoal/`
-        })
+        // //axios request
+        // const api = axios.create({
+        //   baseURL: `http://localhost:3001/weeklyGoal/`
+        // })
 
         
-        const deleteTodo = async (id) =>{
-          let data = await api.delete(`/${id}`)
-          this.getTodos();
-        }
+        // const deleteTodo = async (id) =>{
+        //   let data = await api.delete(`/${id}`)
+        //   this.getTodos();
+        // }
+
+        // const patchTodo = async (id, val) => {
+        //   let data = await api.patch(`/${id}`, { list: val })
+        //   this.getTodos()
+        // }
 
 
   return (
@@ -54,9 +59,10 @@ const Content = () => {
       setInputText={setInputText} 
       setTodos={setTodos} 
       inputText={inputText}
+      // patchTodo={patchTodo}
       />
       <TodoList 
-        deleteTodo={deleteTodo}
+        // deleteTodo={deleteTodo}
         todos={todos}
         setTodos={setTodos}
         filteredTodos={filteredTodos}

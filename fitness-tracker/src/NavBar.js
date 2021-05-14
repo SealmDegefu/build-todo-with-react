@@ -16,13 +16,14 @@ class NavBar extends React.Component {
 		<ReactBootStrap.Nav className="mr-auto">
 		  <ReactBootStrap.Nav.Link> <Link style={{color: 'gray'}} to="/"> <SiHomeassistant /> Home</Link></ReactBootStrap.Nav.Link>
 		  <ReactBootStrap.Nav.Link><Link style={{color: 'gray'}} to="/workout"> <FaDumbbell /> WorkOut Plans</Link></ReactBootStrap.Nav.Link>
-		  <ReactBootStrap.Nav.Link href="#pricing"> <FaPeopleCarry /> About us</ReactBootStrap.Nav.Link>
+		  <ReactBootStrap.Nav.Link><Link style={{color: 'gray'}} to="/About"><FaPeopleCarry />About us </Link></ReactBootStrap.Nav.Link>
 		</ReactBootStrap.Nav>
 		</ReactBootStrap.Navbar>
+
 		<div>
 		<h1 style={{marginTop: "30px", fontSize: "60px", opacity: 1}}>Fitness Tracker</h1>
             <div className="ui form">
-        <p style={{marginBottom: "30px", fontSize: "20px"}}><em>World's Best Accountable Partner</em></p>
+        <em>World's Best Accountable Partner</em>
 		</div>
 		</div>
 		</>

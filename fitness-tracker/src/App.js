@@ -11,6 +11,7 @@ import {
 import NavBar from './NavBar'
 import Workout from './Components/Workout'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import About from './About'
 
 
 
@@ -31,6 +32,9 @@ render(){
     </Route>
     <Route path="/Workout">
     <Workout />
+    </Route>
+    <Route path="/About">
+    <About />
     </Route>
     </Switch>
     </div>

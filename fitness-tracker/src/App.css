@@ -2,11 +2,12 @@
   text-align: center;
 }
 
-.rowC{
+/* .rowC{
   display:flex; 
   flex-direction:row row-reverse column column-reverse;
   justify-content: space-between
-}
+} */
+
 
 *{
   margin: 0;
@@ -14,14 +15,16 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgba(white,0,0,0.5);
+  /* background-color: rgba(white,0,0,0.5);
   color: white;
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-  background-image: url('https://media.istockphoto.com/photos/gym-background-with-equipment-picture-id845970122?k=6&m=845970122&s=612x612&w=0&h=-las2BorgfNUXc84u3MrnOoztybpaGkxWTfGWZb1Cg8=');
+  font-family: "Poppins", sans-serif; */
+  /* min-height: 100vh; */
+  background-image: url(./gym.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+  opacity: 1;
 }
 .navbar {
   opacity: 1;  
@@ -46,7 +49,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  /* margin-right: 30%; */
 }
 form input,
 form button {
@@ -86,6 +89,7 @@ form button:hover {
 }
 .filter-todo {
   padding: 0.5rem;
+  
 }
 .todo li {
   flex: 1;
@@ -133,12 +137,17 @@ select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
+  /* background-color: black; */
+  /* padding: 50px; */
+  width: 300px;
 }
 select {
   color: black;
   font-family: "Poppins", sans-serif;
+  font-weight: bold;
   cursor: pointer;
-  width: 12rem;
+  width: 20rem;
+  /* height: 40px; */
 }
 /* Arrow */
 .select::after {
@@ -153,4 +162,28 @@ select {
 }
 .strike {
   text-decoration: line-through;
+}
+.content{
+position: absolute;
+width: 100%;
+text-align: center;
+font-style: italic;
+font-size: 15px;
+font-weight: 900;
+color: white;
+}
+.quote{
+  position: absolute;
+width: 100%;
+text-align: center;
+font-style: italic;
+font-size: 25px;
+font-weight: 900;
+color: white;
+}
+.ui.form{
+  margin-bottom: 30px; 
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
 }

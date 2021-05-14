@@ -1,16 +1,10 @@
 import React from 'react'
-// import "./Footer.css";
+import "./Footer.css";
 import styled from 'styled-components'
 
 function Footer() {
     return (
       <FooterContainer className="main-footer">
-      <div className="footer-middle">
-      <div className="container">
-      <div className="row">
-      </div>
-            </div>
-            </div>
             {/* footer bottom */}
             <div className= "footer-bottom">
              <p className="col-sm">
